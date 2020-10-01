@@ -1,0 +1,102 @@
+.modal {
+    margin: 100px 0 0 701px;
+    position: fixed;
+    width: 500px;
+    height: 450px;
+    z-index: 2;
+    border: 1px solid rgb(182, 182, 182);
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    transform: scale(1);
+}
+.modal-hide{
+    margin: 100px 0 0 701px;
+    position: fixed;
+    width: 500px;
+    height: 450px;
+    z-index: 2;
+    transform: scale(0);
+}
+
+.modal-inner1 {
+    border-bottom: 1px solid rgb(182, 182, 182);
+    height: 70px;
+    width: 97%;
+    margin: 0 0 0 9px;
+}
+
+.modal-inner1 div {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 220px;
+    margin: 0 0 0 -100px;
+}
+.modal-inner1 div p{
+    margin-left:25px;
+    cursor: pointer;
+    padding:7px;
+    transition:0.4s all ease;
+    color: rgb(104, 104, 104);
+}
+.modal-inner1 div p:nth-child(1){
+    margin-left:25px;
+    cursor: pointer;
+    padding:7px 9px 7px 9px;
+    transition:0.4s all ease
+}
+.modal-inner1 div p:nth-child(2){
+    margin-left:25px;
+    cursor: pointer;
+    padding:7px 8px 7px 8px;
+    transition:0.4s all ease
+}
+.modal-inner1 div p:hover{
+    background-color: rgb(134, 159, 204);
+    border-radius: 2000px;
+}
+
+.modal-inner2 {
+    margin: 2px 0 0 0px;
+    height: 370px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s all ease;
+    color:rgb(104, 104, 104);
+}
+.modal-inner2:hover{
+    overflow: auto;
+    
+}
+
+.modal-inner2 li {
+    text-decoration: none;
+    list-style: none;
+    display: list-item
+}
+
+.modal-inner2::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    transition: 0.3s all ease;
+}
+
+.modal-inner2::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    height: 30px;
+}
+
+.modal-inner2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.modal-inner2::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-inner2::-webkit-scrollbar-thumb:active {
+    background: rgba(163, 163, 163, 0.9);
+}

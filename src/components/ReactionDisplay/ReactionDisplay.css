@@ -1,0 +1,146 @@
+.reaction-display {
+    border: 2px solid rgb(192, 192, 192);
+    width: 500px;
+    height: 700px;
+    margin: 50px 0 50px 700px;
+    border-radius: 20px
+}
+
+.reaction-display img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 60px 0 0 0;
+}
+
+.reaction-emoji-display {
+    width: 30px;
+    display: inline-flex;
+    height: 20px;
+    position: absolute;
+    margin: -13px 0px 0px 20px;
+}
+
+.reaction-emoji-display a {
+    cursor: pointer;
+    margin: 22px 0 0 5px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.reaction-banner-hover {
+    width: 50px;
+    margin-left: -14px;
+}
+
+.reaction-banner-para {
+    border: 7px solid white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.reaction-names-hidden {
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: 0.3s all ease;
+    display: inline;
+    width: 120px;
+    position: absolute;
+    margin: -15px 0 0 -57px;
+    background-color: black;
+    font-size: small;
+    opacity: 0.8;
+    color: white;
+}
+
+.reaction-banner-para:hover+.reaction-names-hidden {
+    transform: scale(1);
+    z-index: 1
+}
+
+.buttons-display {
+    width: 97%;
+    border-bottom: 1.5px solid rgb(200, 200, 200);
+    border-top: 1px solid rgb(200, 200, 200);
+    display: inline-flex;
+    margin-top: 50px;
+    height: 40px;
+    justify-content: space-evenly;
+    color: rgb(122, 122, 122);;
+}
+
+.buttons-display .buttons-bootstrap {
+    width: 155px;
+    height: 30px;
+    margin: 5px 0 0 0;
+    display: inline-flex;
+    border-radius: 4px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+    justify-content: center
+}
+
+.buttons-bootstrap:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.bootstrap-icon {
+    margin: 7px 0 0 0;
+    transition: 0.3s all ease;
+}
+
+.buttons-bootstrap:hover>.bootstrap-icon:nth-child(1) {
+    color: goldenrod;
+}
+
+.buttons-bootstrap:hover>.bootstrap-icon:nth-child(2) {
+    color: skyblue;
+}
+
+.buttons-bootstrap:hover>.bootstrap-icon:nth-child(3) {
+    color: green;
+}
+
+.reactions-buttons {
+    border: 1px solid black;
+    display: inline-flex;
+    position: absolute;
+    margin-top: -50px;
+    z-index: 5;
+    background-color: whitesmoke;
+    width: 300px;
+    justify-content: center;
+    height: 48px;
+    border-radius: 50px;
+    transform: scale(0);
+    transition: 0.3s all ease;
+}
+
+
+
+.react-emote {
+    font-size: xx-large;
+    margin: auto;
+    transition: 0.3s all ease;
+}
+.react-name {
+    border: 1px solid black;
+    font-size: small;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    margin: -70px 0 0 0;
+    transform: scale(0);
+    transition: 0.3s all ease;
+}
+
+.buttons-bootstrap:hover .reactions-buttons {
+    transform: scale(1);
+}
+.react-emote:hover {
+    transform: scale(1.4);
+}
+.react-emote:hover + .react-name{
+    transform: scale(1);
+}
