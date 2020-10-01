@@ -8,6 +8,8 @@ const reactiondisplay = (props) => {
 
     const modalreactions = props.reactions.filter( data => props.usersreaction.some( val => val.reaction_id === data.id)) 
     const usersoriginal = props.users.filter(datausers => props.usersreaction.some(val => datausers.id === val.user_id))
+    const val_temp = props.usersreaction.find( data => props.currentuser.id === data.user_id)
+    const logo = val_temp ? props.reactions.find(data => val_temp.reaction_id === data.id) : undefined
     return <div className='reaction-display'>
         <div>
             <img alt='.' src={props.contentdata.src}
@@ -43,15 +45,17 @@ const reactiondisplay = (props) => {
                     }}>
                         <p style={{margin:"22px 0 0 5px"}}>You</p>
                         <p style={{margin:"22px 0 0 5px"}}>and</p>
-                        <a onClick={() => props.showmodal( modalreactions, usersoriginal, props.usersreaction)} href="#">{props.usersreaction.length - 1}</a>
+                        <a onClick={() => props.showmodal( modalreactions, usersoriginal, props.usersreaction)}>{props.usersreaction.length - 1}</a>
                         <p style={{margin:"22px 0 0 5px"}}>others</p>
-                    </div> : <a onClick={() => props.showmodal( modalreactions, usersoriginal, props.usersreaction)}  href="#">{props.usersreaction.length - 1}</a>
+                    </div> : <a onClick={() => props.showmodal( modalreactions, usersoriginal, props.usersreaction)} >{props.usersreaction.length - 1}</a>
             }
         </div>
 
         <div className='buttons-display'>
             <div className="buttons-bootstrap">
-                <Icon.HandThumbsUp className="bootstrap-icon" />
+                {logo ? <p style={{
+                    margin:"5px 0 0 0"
+                }}>{logo.emoji}</p> : <Icon.HandThumbsUp className="bootstrap-icon" />}
                 <p style={{ margin: "5px 0 0 7px" }}>Like</p>
                 <div className="reactions-buttons">
                     {props.reactions.map(data => <div>
