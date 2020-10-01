@@ -63,7 +63,7 @@ class DisplayPost extends Component {
     likebuttonhandler = async (data, id) => {
         let temp
         let val = this.state.usersreaction.find(datafind => datafind.user_id === this.state.currentuser.id && datafind.content_id === id && data !== datafind.reaction_id)
-        console.log(val)
+        //console.log(val)
         temp = val ? val.id : undefined
 
         //if reaction is there but no the same one (e.g xD is there but the requested one is :( ))

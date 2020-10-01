@@ -44,10 +44,10 @@
     border-radius: 10px;
     transform: scale(0);
     transition: 0.3s all ease;
-    display: inline;
+    /* display: inline; */
     width: 120px;
     position: absolute;
-    margin: -15px 0 0 -57px;
+    margin: -15px 0 0 -40px;
     background-color: black;
     font-size: small;
     opacity: 0.8;
