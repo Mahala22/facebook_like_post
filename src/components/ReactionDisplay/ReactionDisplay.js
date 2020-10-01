@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import * as Icon from 'react-bootstrap-icons'
 import './ReactionDisplay.css'
@@ -16,7 +17,7 @@ const reactiondisplay = (props) => {
             />
         </div>
         <div className="reaction-emoji-display">
-            {props.reactions.map(datareaction => {
+            {props.reactions.map((datareaction ,index) => {
 
                 const users_per_reaction = props.usersreaction.filter(datauserreact => datauserreact.reaction_id === datareaction.id)
                 //console.log(users_per_reaction)
@@ -24,7 +25,7 @@ const reactiondisplay = (props) => {
                 //console.log(usersnames)
                 const temp = usersnames.map(data => <p>{data.first_name + " " + data.last_name}</p>)
                 if (users_per_reaction.length !== 0) {
-                    return <div className="reaction-banner-hover">
+                    return <div key={index} className="reaction-banner-hover">
                         <p className="reaction-banner-para"> {datareaction.emoji} </p>
                         <div className='reaction-names-hidden'>
                             {temp}
